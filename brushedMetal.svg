@@ -1,0 +1,27 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Define the base radial gradient -->
+    <radialGradient id="base-gradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFFFFF" />
+      <stop offset="70%" style="stop-color:#B0B0B0" />
+      <stop offset="100%" style="stop-color:#808080" />
+    </radialGradient>
+
+    <!-- Define the brush stroke pattern -->
+    <pattern id="brush-stroke-pattern" x="0" y="0" width="10" height="1" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect x="0" y="0" width="10" height="1" fill="black" />
+    </pattern>
+
+    <!-- Define the noise filter with brush stroke marks -->
+    <filter id="noise-filter" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="1" result="noise" />
+      <feComposite in="SourceGraphic" in2="noise" operator="arithmetic" k1="0" k2="1" k3="0.1" k4="0" result="noisy" />
+      <feFlood flood-color="black" flood-opacity="0.1" result="brush-stroke-color" />
+      <feTile in="brush-stroke-color" result="tiled-brush-strokes" />
+      <feBlend in="noisy" in2="tiled-brush-strokes" mode="multiply" />
+    </filter>
+  </defs>
+
+  <!-- Apply the radial gradient and the noise filter with brush stroke marks to a circle -->
+  <circle cx="150" cy="150" r="100" fill="url(#base-gradient)" filter="url(#noise-filter)" />
+</svg>

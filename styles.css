@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+#task-pacer-container {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+.timer {
+  width: 100%;
+  height: 100%;
+}
+
+.task-pacer-progress {
+  transform-origin: center;
+  transform-box: fill-box;
+  transition: stroke-dasharray 0.5s linear;
+}
+
+.task-pacer-display {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task-pacer-time {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.task-pacer-session-count {
+  font-size: 1rem;
+}
+
+.task-pacer-start,
+.task-pacer-pause {
+  margin-top: 1rem;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.task-pacer-pause {
+  display: none;
+}
+
+#clock {
+  width: 300px;
+  height: 300px;
+}
+
+/* SVG itself */
+.Sektor {
+  width: 100px;
+  height: 100px
+} 
+/* Sector */
+.Sektor-sector{} 
+/* Background circle */
+.Sektor-circle{}

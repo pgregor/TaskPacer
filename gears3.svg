@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Clock Circle -->
+  <circle cx="60" cy="100" r="40" fill="#EDEDED" stroke="black" stroke-width="2" />
+  <text x="48" y="110" font-family="Verdana" font-size="14" fill="black">Clock</text>
+  
+  <!-- Timer Circle -->
+  <circle cx="140" cy="100" r="40" fill="#EDEDED" stroke="black" stroke-width="2" />
+  <text x="125" y="110" font-family="Verdana" font-size="14" fill="black">Timer</text>
+  
+  <!-- Gear for Clock -->
+  <circle cx="60" cy="100" r="20" fill="none" stroke="black" stroke-width="1" />
+  <path d="M60,80 L60,60 M80,100 L100,100 M60,120 L60,140 M40,100 L20,100" stroke="black" stroke-width="2" />
+  
+  <!-- Central Gear -->
+  <circle cx="100" cy="100" r="10" fill="none" stroke="black" stroke-width="1" />
+  <path d="M100,90 L100,70 M110,100 L130,100 M100,110 L100,130 M90,100 L70,100" stroke="black" stroke-width="2" />
+  
+  <!-- Gear for Timer -->
+  <circle cx="140" cy="100" r="20" fill="none" stroke="black" stroke-width="1" />
+  <path d="M140,80 L140,60 M160,100 L180,100 M140,120 L140,140 M120,100 L100,100" stroke="black" stroke-width="2" />
+  
+  <!-- Connection -->
+  <line x1="80" y1="100" x2="90" y2="100" stroke="black" stroke-width="1" stroke-dasharray="2,2" />
+  <line x1="110" y1="100" x2="120" y2="100" stroke="black" stroke-width="1" stroke-dasharray="2,2" />
+</svg>
